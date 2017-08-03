@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class LoginController extends Controller
 {
@@ -34,6 +36,23 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        $this->middleware('guest', ['except' => 'logout']);
     }
+
+    //重写验证字段
+    public function username()
+    {
+        return 'name';
+    }
+
+
+    protected function credentials(Request $request)
+    {
+        $language = $request->language;
+        App::setLocale($language);
+        Session(['local'=>$language]);
+        return $request->only($this->username(), 'password');
+    }
+
+
 }

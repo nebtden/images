@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Seller\Seller;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,5 +25,9 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->bind('seller', function() {
+//            Seller()
+            return new Seller();
+        });
     }
 }

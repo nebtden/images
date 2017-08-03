@@ -10,4 +10,9 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    protected  $return_msg_list = [
+        'status'=>'fail',
+        'error'=>'method type not found!'
+    ];
 }

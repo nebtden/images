@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\PjaxMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -33,7 +34,9 @@ class Kernel extends HttpKernel
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
+            \App\Http\Middleware\Local::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+//            \App\Http\Middleware\ResetPassword::class,
         ],
 
         'api' => [
@@ -56,5 +59,13 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'client' => \App\Http\Middleware\Client::class,
+        'courier' => \App\Http\Middleware\Courier::class,
+        'pay' => \App\Http\Middleware\Payment::class,
+        'wms' => \App\Http\Middleware\Wms::class,
+        'local' => \App\Http\Middleware\Local::class,
+        'resetpassword' => \App\Http\Middleware\ResetPassword::class,
+        'tms' => \App\Http\Middleware\Tms::class,
+        'pjax' => PjaxMiddleware::class,
     ];
 }
