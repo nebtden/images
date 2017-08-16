@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nilo | {{ trans('admin::lang.login') }}</title>
+    <title>宅圣 | {{ trans('admin::lang.login') }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
@@ -26,9 +26,9 @@
 </head>
 <body class="hold-transition login-page skin-color">
 <div class="login-box">
-    <div class="login-logo">
-        <a href="/"><img src="/images/logo.png" width="120px" height="80px"></a>
-    </div>
+    {{--<div class="login-logo">--}}
+        {{--<a href="/"><img src="/images/logo.jpg" width="120px" height="80px"></a>--}}
+    {{--</div>--}}
     <!-- /.login-logo -->
     <div class="login-box-body">
 
@@ -54,14 +54,6 @@
 
                 <input type="password" class="form-control" placeholder="{{ trans('admin::lang.password') }}" name="password" value="{{ old('username') }}">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback" >
-                <select name="language" class="form-control" >
-                    <option value="en">English</option>
-                    <option value="zh_CN">汉语</option>
-
-                </select>
-                <span class="glyphicon glyphicon-book form-control-feedback"></span>
             </div>
             <div class="row">
 
@@ -100,11 +92,11 @@
     var View = {
 
         themes: [
-            { image: '/images/seller/background/1.jpg', top: '20%' },
-            { image: '/images/seller/background/2.jpg', right: '15%' },
-            { image: '/images/seller/background/3.jpg', bottom: '10%' },
-            { image: '/images/seller/background/4.jpg', left: '20%' },
-            { image: '/images/seller/background/5.jpg', bottom: '15%' }
+            { image: '/images/user/background/1.jpg', right: '20%' },
+            { image: '/images/user/background/2.jpg', left: '15%' },
+            { image: '/images/user/background/3.jpg', bottom: '10%' },
+            { image: '/images/user/background/4.jpg', right: '20%' },
+            { image: '/images/user/background/5.jpg', right: '10%' }
         ],
 
         init: function() {

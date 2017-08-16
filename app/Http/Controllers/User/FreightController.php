@@ -5,7 +5,7 @@
  * @simon.zhang
  * 第一期暂时不上
  */
-namespace App\Http\Controllers\Seller;
+namespace App\Http\Controllers\User;
 
 use App\Models\Freight;
 use Encore\Admin\Form;

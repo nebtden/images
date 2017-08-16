@@ -5,5 +5,5 @@
         <strong>Version</strong>&nbsp;&nbsp; {!! config('admin.version') !!}
     </div>
     <!-- Default to the left -->
-    <strong>Powered by Nilo</strong>
+    <strong>宅圣</strong>
 </footer>

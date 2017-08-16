@@ -48,9 +48,6 @@ class LoginController extends Controller
 
     protected function credentials(Request $request)
     {
-        $language = $request->language;
-        App::setLocale($language);
-        Session(['local'=>$language]);
         return $request->only($this->username(), 'password');
     }
 

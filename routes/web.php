@@ -25,21 +25,12 @@ Route::get('/guzzle',"TestController@guzzle")->name('guzzle');
 Auth::routes();
 
 //普通页面
-Route::get('/home', 'Seller\HomeController@index');
-Route::middleware(['pjax'])->resource('/seller/freight', 'Seller\FreightController');
-Route::middleware(['pjax'])->resource('/seller/transaction', 'Seller\TransactionController');
-Route::middleware(['pjax'])->resource('/seller/transition', 'Seller\TransitionController');
-Route::middleware(['pjax'])->resource('/seller/storage', 'Seller\StorageChargeController');
-Route::middleware(['pjax'])->resource('/seller/store', 'Seller\StoreController');
-
-Route::middleware(['pjax'])->resource('/seller/deduction', 'Seller\DeductionController');
-Route::middleware(['pjax'])->get('/seller/day', 'Seller\DeductionController@day');
-Route::middleware(['pjax'])->get('/seller/week', 'Seller\DeductionController@week');
-Route::middleware(['pjax'])->get('/seller/month', 'Seller\DeductionController@month');
+Route::get('/home', 'User\HomeController@index');
+Route::middleware(['pjax'])->resource('/user/record', 'User\RecordController');
 
 // 设置密码等操作
-//Route::middleware('pjax')->resource('/seller/setting', 'Seller\SettingController',['as'=>'/seller/setting']);
-//Route::put('/seller/setting/update', 'Seller\SettingController@update');
+//Route::middleware('pjax')->resource('/user/setting', 'User\SettingController',['as'=>'/user/setting']);
+//Route::put('/user/setting/update', 'User\SettingController@update');
 
 
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');

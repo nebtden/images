@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Nilo</title>
+        <title>宅圣</title>
 
         <!-- Fonts -->
         <link href="{{ URL::asset('css/googleapi.css') }}" rel="stylesheet" type="text/css">
@@ -83,7 +83,7 @@
                     <img src="/images/logo.png" width="100" height="100">
                 </div>
                 <div class="title m-b-md">
-                    Nilo
+                    宅圣
                 </div>
 
                 

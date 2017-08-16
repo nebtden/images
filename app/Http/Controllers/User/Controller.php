@@ -5,7 +5,7 @@
  * Date: 2017/6/12
  * Time: 14:07
  */
-namespace App\Http\Controllers\Seller;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;

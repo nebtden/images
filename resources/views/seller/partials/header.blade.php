@@ -3,9 +3,9 @@
     <!-- Logo -->
     <a href="/home" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>Nilo</b></span>
+        <span class="logo-mini"><b>宅圣</b></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Nilo</b> </span>
+        <span class="logo-lg"><b>宅圣</b> </span>
     </a>
 
     <!-- Header Navbar -->

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Seller;
+namespace App\Http\Controllers\User;
 
 
 use App\Seller\Facades\Seller;
@@ -19,12 +19,8 @@ class HomeController extends Controller
     {
         return Seller::content(function (Content $content) {
 
-            $content->header('Dashboard');
-            $content->description('Welcome to nilo...');
-
-
-
-
+            $content->header('');
+            $content->description('欢迎来到宅圣...');
 
         });
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Seller;
+namespace App\Http\Controllers\User;
 
 use App\Models\Client;
 use App\Models\Deduction;
